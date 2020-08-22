@@ -1,0 +1,58 @@
+*{margin: 0; padding: 0;}
+body {
+  color: #666;
+  font: 12px/1.5 微软雅黑;
+  min-width: 1200px;
+}
+.login{width: 1000px;margin:0 auto;
+	padding-top: 25px;
+	margin-bottom: 5px;}
+/* center */
+.passport .inner-wrap{
+  padding: 45px 10px 0 40px;
+  background-color: #fff;
+  margin: 0 auto 20px;
+  width: 960px;
+  min-height: 470px;  /*  ** */
+  border-radius: 10px;
+  box-sizing: content-box;
+}
+/* center--left */
+.signup-content{
+  width: 630px;
+  float: left;
+	border: 2px solid #e5e5e5;
+}
+.signup-content h4{
+	color: #515151;padding:10px 24px;
+	border-bottom: 1px solid #bbb;
+}
+.signup-content ul{list-style: none;}
+.signup-content label{
+	float: left;
+	font-size: 14px;
+	color: #515151;
+	text-align: right;
+	line-height: 38px;
+	width: 145px;
+	margin-bottom: 0;
+}
+.signup-content ul em{color: #ee2b09;font-size: 15px;}
+.signup-content li {
+	height: 51px;
+	margin-bottom: 10px;
+	}
+.signup-content .btn{
+	width: 260px;
+	border-radius: 3px;
+}
+.user_reg .reg{
+	position: relative;
+	top: 30px;
+	left: -270px;
+}
+/* center--right */
+.signup-quit{
+  margin-left: 655px;
+  color: #565656;
+}
