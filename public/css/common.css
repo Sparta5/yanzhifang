@@ -14,7 +14,7 @@ button {border: 0;}
 	padding-left: 2px;
 	/* outline: none; */
 }
-.x-input:hover{border:1px solid red;}
+.x-input:hover{border:2px solid red;}
 .btn{
   font-size: 14px;
   padding: 8px 26px;
