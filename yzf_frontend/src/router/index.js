@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import User_msg from '../views/User_msg'
+import Register from '../views/Register'
 
 Vue.use(VueRouter)
 
@@ -12,8 +12,8 @@ const routes = [
     component: Home
   },
   {
-    path:'/user_msg',
-    component: User_msg
+    path:'/register',
+    component: Register
   },
   {
     path: '/about',
