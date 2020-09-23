@@ -67,7 +67,8 @@ router.get('/register',(req,res)=>{
         if(result.length>0){
           console.log('已占用')
           res.send({code:0, msg: 'fail'})
-        }else if($upwd){
+          return
+        }else if($upwd&&!result.length>0){
           // res.send({code:1 , msg: 'ok'})
           //如果有密码就插入
             let sql=`insert into user set ?`

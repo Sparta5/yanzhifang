@@ -71,7 +71,8 @@
 </div>
 </template>
 <script>
-  import "../assets/css/common.css"
+	import "../assets/css/common.css"
+	import {getRegister} from "../assets/js/apis/register"//因为用对象抛出所以用对象接
 export default {
 		
 		data(){
@@ -90,17 +91,20 @@ export default {
 					var unameRegExp = /^\D$/
 					var emailRegExp = /^[0-9a-zA-Z_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-])$/ 
 					var phoneRegExp = /^1[34578]\d{9}$/
+					//先判断手机号
 					if(phoneRegExp.test(this.val)){
 						this.status="ok"
 						console.log(this.val)
 						// this.axios.get(`/user/register?phone=${this.val}`)
-						this.axios.get(`/user/register`,{//params参数必写 , 如果没有参数传{}也可以
-										params: {
-												phone:this.val
-										}
-									}
-							)//为了方便全局统一调用封装的axios，我一般采用（推荐）
-						.then((result)=>{console.log(result.data)})
+						// this.axios.get(`/user/register`,{//params参数必写 , 如果没有参数传{}也可以
+						// 				params: {
+						// 						phone:this.val
+						// 				}
+						// 			}
+						// 	)//为了方便全局统一调用封装的axios，我一般采用（推荐）
+						// var obj={phone:this.val,upwd:123132}
+						getRegister({phone:this.val,upwd:123132})//axios在assets/js/apis封装了直接调用函数
+						.then(result=>{console.log(result)})
 					}else{console.log("no")}
 
 				},
