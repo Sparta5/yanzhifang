@@ -10,8 +10,8 @@ USE yzf;
 CREATE TABLE `user` (
   `uid`INT PRIMARY KEY AUTO_INCREMENT,
   `uname` VARCHAR(16),
-  `email` VARCHAR(26),
-  `phone` TINYINT(11),
+  `email` VARCHAR(32),
+  `phone` INT(11),
   `upwd`  VARCHAR(16)
   -- `avatar` VARCHAR(50) NOT NULL DEFAULT `unamed.jpg` COMMENT `用头像`
 );

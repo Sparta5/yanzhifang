@@ -22,7 +22,7 @@
 					<li><label>
 					<em>* </em>密码：&nbsp;</label>
 					<span>
-						<input type="text"  class="x-input" @blur="checkupwd"  placeholder="6-20个字符">
+						<input type="password"  class="x-input" @blur="checkupwd"  placeholder="6-20个字符">
 						<span class="reg">*</span>
 						<span class="d-inline-block">
 							<span>密码强度：</span><em class="font_small">强</em>
@@ -33,7 +33,7 @@
 					<li><label>
 					<em>* </em>确认密码：&nbsp;</label>
 					<span>
-						<input type="text" @blur="checkconupwd" class="x-input" placeholder="再次填写密码">
+						<input type="password" @blur="checkconupwd" class="x-input" placeholder="再次填写密码">
 						<span class="reg">*</span>
 					</span>
 					</li>
@@ -87,13 +87,12 @@ export default {
 		},
 		methods:{
 				checkval(){
-					var unameRegExp = /^\d{4,12}$/
+					var phoneRegExp = /^1[34578]\d{9}$/
+					var unameRegExp = /^\d{4,12}$+^\D$/
 					var unameRegExp = /^\D$/
 					var emailRegExp = /^[0-9a-zA-Z_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-])$/ 
-					var phoneRegExp = /^1[34578]\d{9}$/
 					//先判断手机号
 					if(phoneRegExp.test(this.val)){
-						this.status="ok"
 						console.log(this.val)
 						// this.axios.get(`/user/register?phone=${this.val}`)
 						// this.axios.get(`/user/register`,{//params参数必写 , 如果没有参数传{}也可以
@@ -102,11 +101,20 @@ export default {
 						// 				}
 						// 			}
 						// 	)//为了方便全局统一调用封装的axios，我一般采用（推荐）
-						// var obj={phone:this.val,upwd:123132}
-						getRegister({phone:this.val,upwd:123132})//axios在assets/js/apis封装了直接调用函数
-						.then(result=>{console.log(result)})
-					}else{console.log("no")}
-
+						var obj={phone:this.val}
+						getRegister(obj)//axios在assets/js/apis封装了直接调用函数
+						.then(result=>{
+							 result.code==0?this.status="手机号已被占用":this.status="ok"
+							 console.log(result)
+						})
+					}else if(unameRegExp.test(this.val)){
+						var obj={uname:this.val}
+						getRegister(obj)
+						.then(result=>{
+							result.code==0?this.status="该用户名已被注册":this.status="用户名可以使用"
+						})
+						console.log("no")
+					}
 				},
 				checkupwd(){console.log("upwd")},
 				checkconupwd(){console.log("upwd")}

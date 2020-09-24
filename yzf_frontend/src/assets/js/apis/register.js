@@ -10,7 +10,7 @@ function getRegister(obj){
 						// 						phone:this.val
 						// 				}
 						// 			}//上面一段是没封装的写法
-      axios.get(baseURL+"/user/register",{
+      axios.get(baseURL+"/users/register",{
         params://{
               obj
         // }

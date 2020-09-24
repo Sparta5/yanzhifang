@@ -1,5 +1,5 @@
   /*****封装axis******/
-  var baseURL="https://useryzf3.applinzi.com";
+  var baseURL="http://localhost:5050";
 
   export {
       baseURL
