@@ -88,7 +88,7 @@ export default {
 		methods:{
 				checkval(){
 					var phoneRegExp = /^1[34578]\d{9}$/
-					var unameRegExp = /^\d{4,12}$+^\D$/
+					var unameRegExp = /^\d{4,12}/
 					var unameRegExp = /^\D$/
 					var emailRegExp = /^[0-9a-zA-Z_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-])$/ 
 					//先判断手机号

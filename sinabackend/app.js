@@ -13,6 +13,7 @@ var app = express();
 app.use(cors({      
   origin:[ //允许跨域的客户端源头有哪些
     'http://localhost:8080', //vue脚手架
+    'http://localhost:8081', //vue脚手架
     "http://127.0.0.1:5050", //live server
     "http://xzvue.applinzi.com" //新浪云上的vue项目
   ],
