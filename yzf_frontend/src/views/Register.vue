@@ -16,7 +16,11 @@
 					<em>* </em>登录账号：&nbsp;</label>
 					<span>
 						<input type="text" v-model="val" @blur="checkval"  class="x-input" placeholder="用户名/邮箱/手机号,最少4个字符">
-						<span class="reg">{{status}}</span>
+						<span class="reg">
+							<!-- <q class="iconfont" :class="isuname==''?'default':isuname==true?'icon-gou':'icon-tanhao'"></q> -->
+							<q class="iconfont" :class="[ishadden?'hidden':'visible',isuname?'icon-gou':'icon-tanhao']"></q>
+							<span v-text="statusUname"></span>
+						</span>
 					</span>
 					</li>
 					<li><label>
@@ -46,11 +50,12 @@
 					</li>
 					<li>
 						<label>&nbsp;</label>
-					<p class="mt-3">
+					<p class="">
 						<input type="checkbox" name="" id="" value="" />
 						&nbsp;我已阅读并同意 
 						<a href="#" class="text-danger"> 会员注册协议</a> 和 
 						<a href="#" class="text-danger">隐私保护政策</a>
+						<span class="reg">*6465465</span>
 					</p>
 					</li>
 					<li>
@@ -77,19 +82,21 @@ export default {
 		
 		data(){
 				return{
-				val:"15282395690",
+				val:'',
 				// uname:"",
 				// email:"",
 				// phone:"",
 				// upwd:"",
-				status:""
+				isuname:null,
+				ishadden:true,
+				statusUname:null
 			}
 		},
 		methods:{
 				checkval(){
 					var phoneRegExp = /^1[34578]\d{9}$/
-					var unameRegExp = /^\d{4,12}/
-					var unameRegExp = /^\D$/
+					var unameRegExp = /^\d{4,12}$/
+					var unameRegExp2 = /[#\$%\^&\*]/
 					var emailRegExp = /^[0-9a-zA-Z_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-])$/ 
 					//先判断手机号
 					if(phoneRegExp.test(this.val)){
@@ -101,27 +108,38 @@ export default {
 						// 				}
 						// 			}
 						// 	)//为了方便全局统一调用封装的axios，我一般采用（推荐）
-						var obj={phone:this.val}
+						var obj={phone:this.val.trim()}
 						getRegister(obj)//axios在assets/js/apis封装了直接调用函数
 						.then(result=>{
-							 result.code==0?this.status="手机号已被占用":this.status="ok"
+							//  result.code!=0?this.statusUname="该登录账号可用":this.statusUname="手机号已被占用";
+							//  result.code!=0?this.isuname=true:this.isuname=false;
+							if(result.code!=0){
+								this.statusUname="该登录账号可用";
+								this.ishadden=false;
+								this.isuname=true
+							}else{
+								this.statusUname="手机号已被占用";
+								this.ishadden=false;
+								this.isuname=false
+							}
 							 console.log(result)
 						})
-					}else if(unameRegExp.test(this.val)){
-						var obj={uname:this.val}
+					}else if(!unameRegExp.test(this.val) && this.val.search(unameRegExp2)==-1){
+						console.log(`执行用户名请求`)
+						var obj={uname:this.val.trim()}
 						getRegister(obj)
 						.then(result=>{
-							result.code==0?this.status="该用户名已被注册":this.status="用户名可以使用"
+							result.code==0?this.statusUname="该用户名已被注册":this.statusUname="用户名可以使用"
 						})
 						console.log("no")
-					}
+					}else{}
 				},
 				checkupwd(){console.log("upwd")},
 				checkconupwd(){console.log("upwd")}
 		}
 }
 </script>
-<style>
+<style lang="scss">
 *{margin: 0; padding: 0;}
 body {
   color: #666;
@@ -178,12 +196,16 @@ padding-left: 5px;}
 .user_reg .progress{width: 110px;height: 8px;border-radius: 0px;margin-top: 2px;}
 .user_reg .reg{
 	position: relative;
-	top: 30px;
-	left: -270px;
+	top: 25px;
+	left: -266px;
 }
 /* content--right */
 .signup-quit{
   margin-left: 655px;
   color: #565656;
 }
+// 提示的三种状态
+.hidden{visibility: hidden;}
+.icon-tanhao{color: brown;padding-right: 4px;}
+.icon-gou{color: green;padding-right: 4px;}
 </style>
