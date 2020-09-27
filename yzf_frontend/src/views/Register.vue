@@ -15,19 +15,23 @@
           <li><label class="float-left">
 					<em>* </em>登录账号：&nbsp;</label>
 					<span>
-						<input type="text" v-model="val" @blur="checkval"  class="x-input" placeholder="用户名/邮箱/手机号,最少4个字符">
+						<input type="text" v-model="userVal" @blur="checkUname"  class="x-input" placeholder="用户名/邮箱/手机号,最少4个字符">
 						<span class="reg">
 							<!-- <q class="iconfont" :class="isuname==''?'default':isuname==true?'icon-gou':'icon-tanhao'"></q> -->
-							<q class="iconfont" :class="[ishadden?'hidden':'visible',isuname?'icon-gou':'icon-tanhao']"></q>
+							<q class="iconfont" :class="[userHadden?'hidden':'visible',isuname?'icon-gou':'icon-tanhao']"></q>
 							<span v-text="statusUname"></span>
 						</span>
 					</span>
 					</li>
+					<!-- 密码验证 -->
 					<li><label>
 					<em>* </em>密码：&nbsp;</label>
 					<span>
-						<input type="password"  class="x-input" @blur="checkupwd"  placeholder="6-20个字符">
-						<span class="reg">*</span>
+						<input type="password"  class="x-input" v-model="userUpwd" @blur="checkupwd"  placeholder="6-20个字符">
+						<span class="reg">
+							<q class="iconfont" :class="[upwdHadden?'hidden':'visible',isupwd?'icon-gou':'icon-tanhao']"></q>
+							<span v-text="statusUpwd"></span>
+						</span>
 						<span class="d-inline-block">
 							<span>密码强度：</span><em class="font_small">强</em>
 							<span class="progress"><span>****</span></span>
@@ -82,59 +86,62 @@ export default {
 		
 		data(){
 				return{
-				val:'',
-				// uname:"",
-				// email:"",
-				// phone:"",
-				// upwd:"",
+				userVal:"",
+				userUpwd:"",
 				isuname:null,
-				ishadden:true,
-				statusUname:null
+				userHadden:true,
+				statusUname:null,
+				isupwd:null,
+				upwdHadden:true,
+				statusUpwd:unll
 			}
 		},
 		methods:{
-				checkval(){
+				// ------用户账号验证-------
+				checkUname(){
 					var phoneRegExp = /^1[34578]\d{9}$/
 					var unameRegExp = /^\d{4,12}$/
 					var unameRegExp2 = /[#\$%\^&\*]/
 					var emailRegExp = /^[0-9a-zA-Z_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-])$/ 
 					//先判断手机号
-					if(phoneRegExp.test(this.val)){
-						console.log(this.val)
-						// this.axios.get(`/user/register?phone=${this.val}`)
+					if(phoneRegExp.test(this.userVal)){
+						console.log(this.userVal)
+						// this.axios.get(`/user/register?phone=${this.userVal}`)
 						// this.axios.get(`/user/register`,{//params参数必写 , 如果没有参数传{}也可以
 						// 				params: {
-						// 						phone:this.val
+						// 						phone:this.userVal
 						// 				}
 						// 			}
 						// 	)//为了方便全局统一调用封装的axios，我一般采用（推荐）
-						var obj={phone:this.val.trim()}
+						var obj={phone:this.userVal.trim()}
 						getRegister(obj)//axios在assets/js/apis封装了直接调用函数
 						.then(result=>{
 							//  result.code!=0?this.statusUname="该登录账号可用":this.statusUname="手机号已被占用";
 							//  result.code!=0?this.isuname=true:this.isuname=false;
 							if(result.code!=0){
 								this.statusUname="该登录账号可用";
-								this.ishadden=false;
+								this.userHadden=false;
 								this.isuname=true
 							}else{
 								this.statusUname="手机号已被占用";
-								this.ishadden=false;
+								this.userHadden=false;
 								this.isuname=false
 							}
 							 console.log(result)
 						})
-					}else if(!unameRegExp.test(this.val) && this.val.search(unameRegExp2)==-1){
+					}else if(!unameRegExp.test(this.userVal) && this.userVal.search(unameRegExp2)==-1){
 						console.log(`执行用户名请求`)
-						var obj={uname:this.val.trim()}
+						var obj={uname:this.userVal.trim()}
 						getRegister(obj)
 						.then(result=>{
-							result.code==0?this.statusUname="该用户名已被注册":this.statusUname="用户名可以使用"
+							result.code==0?(this.statusUname="该用户名已被注册"):this.statusUname="用户名可以使用"
 						})
 						console.log("no")
 					}else{}
 				},
+				//----------密码验证---------
 				checkupwd(){console.log("upwd")},
+				//----------确认密码验证-------
 				checkconupwd(){console.log("upwd")}
 		}
 }
