@@ -77,9 +77,9 @@ router.get('/register',(req,res)=>{
           //如果有密码就插入
             let sql=`insert into user set ?`
             pool.query(sql,[$obj],(err,result)=>{
-              if(err) throw result;
+              if(err) throw err;
               console.log(result)
-              if(result.affectedRows==1){
+              if(result.affectedRows>=1){
                 //设置服务器响应头信息 解决跨域问题
                 // res.set('Access-Cotrol-Allow-Origin','http://localhost:8080')
                   res.send({code:200, msg: 'success'})
