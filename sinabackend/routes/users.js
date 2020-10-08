@@ -13,10 +13,11 @@ router.get('/cs',(req,res)=> {res.send(`接收到了${req.quey}`)})
 
 
 /****用户登录接口post****/
-router.get('/login',(req,res)=> {
+router.post('/login',(req,res)=> {
+    console.log(req.body)
     //获取用户提交信息
-    var {uname,email,phone}=req.query
-    var $upwd=req.query.upwd
+    var {uname,email,phone,upwd}=req.body
+    // var $upwd=req.body.upwd
     var $data="";
     var $value="";
     if(uname){
@@ -31,23 +32,23 @@ router.get('/login',(req,res)=> {
     }
     console.log($data,$value)
     var sql=`select * from user where ${$data}=? and upwd=?`
-
     //设置服务器响应头信息 解决跨域问题
     // res.set('Access-Control-Allow-Origin', 'http://localhost:8080')
-    pool.query(sql,[$value,$upwd],(err,result)=>{
+    pool.query(sql,[$value,upwd],(err,result)=>{
       if(err) throw err
-      console.log(result)
-    res.send(`用户${$value}密码${$upwd}`)
+      console.log(result)//post返回的必须是个数组
+      if(result.length > 0) return res.send({code: 1, msg: 'success',result:result[0]})
+      res.send({code: 0,msg: 'fail'})
     })
   })
 
 /****用户注册检测插入接口post****/
-router.get('/register',(req,res)=>{
+router.post('/register',(req,res)=>{
     console.log(`接受到了数据`)
     //获得用户提交信息
-    var {uname,email,phone}=req.query
-    var $upwd=req.query.upwd
-    var $obj=req.query
+    var {uname,email,phone}=req.body
+    var $upwd=req.body.upwd
+    var $obj=req.body
     console.log($obj)
     //判断用那种方式注册保存不同的属性名和属性值
     var $data="";
@@ -83,7 +84,7 @@ router.get('/register',(req,res)=>{
                 //设置服务器响应头信息 解决跨域问题
                 // res.set('Access-Cotrol-Allow-Origin','http://localhost:8080')
                   res.send({code:200, msg: 'success'})
-                  console.log(`success`)
+                  console.log({$data,$value,upwd:$upwd})
                }
             })
         }else{
@@ -91,6 +92,5 @@ router.get('/register',(req,res)=>{
         }
     })
 })
-
 
 module.exports=router;
