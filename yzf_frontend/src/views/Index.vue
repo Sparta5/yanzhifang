@@ -88,13 +88,13 @@
                   </ul>
                 </div>
               </div>
-
-              
             </div>
-            
           </li>
         </ul>
       </div>
+    </div>
+    <div class="main_content">
+       <img src="../assets/imges/signup/mydcZ.jpg">
     </div>
   </div>
 </template>
@@ -125,13 +125,15 @@ export default {
   .home{
     padding-top: 20px;
     .main{
-      width: 100%;height: 1000px;
+      width: 1200px;
       background-color: rgba(139, 135, 168, 0.1);
+      margin: 0px auto;
+      position: relative;
       .mainNav{
         width: 230px;height: 480px;
         background-color: rgba($color: #000000, $alpha: 0.4);
-        position: relative;
-        top: -480px;left:75px;
+        position: absolute;
+        top: 0px;left:0px;
         z-index: 10;
         ul{
 
@@ -221,6 +223,9 @@ export default {
         }
       }
     }
-    
+    .main_content{
+      width: 1200px;
+      margin: 36px auto;
+    }
   }
 </style>
