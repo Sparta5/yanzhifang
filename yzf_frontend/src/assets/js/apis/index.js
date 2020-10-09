@@ -7,7 +7,7 @@ function getIndex(data){
   return new Promise(
     function(resolve,reject){
       axios.get(baseURL+data.url,{
-        params:data.datas
+        params:data.id
       })
       .then(result=>{
         resolve(result.data)

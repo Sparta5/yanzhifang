@@ -96,6 +96,9 @@
     <div class="main_content">
        <img src="../assets/imges/signup/mydcZ.jpg">
     </div>
+    <div class="index_list">
+      <index-list></index-list>
+    </div>
   </div>
 </template>
 
@@ -103,10 +106,11 @@
 // @ is an alias to /src
 import myHeader from "../components/Header"
 import Carousel from "../components/carousel/Carousel"
+import indexList from "../components/index/indexList"
 import {getIndex} from "../assets/js/apis/index";
 export default {
   components: {
-    myHeader,Carousel
+    myHeader,Carousel,indexList
   },
   data(){
     return {
@@ -140,7 +144,13 @@ export default {
           li{
             height: 93px;
             border-bottom: 1px solid rgba(116, 111, 153, 0.3); 
-            &:hover{.cat_chldren_box{visibility: visible;}}
+            &:hover{
+              .cat_chldren_box{visibility: visible;}
+              .nav_l{
+                background-color: white;
+                a{color: black;}
+              }
+            }
             h5{
               padding-top: 20px;
               a{color: white;}
@@ -157,11 +167,6 @@ export default {
             .nav_l{
               width: 230px;height: 93px;
               padding-left: 15px;
-              &:hover{
-                background-color: white;
-                a{color: black;}
-                
-              }
               div{
                 a{padding: 0px 4px;color: #aea7a5;}
               }
