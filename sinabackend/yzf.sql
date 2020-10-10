@@ -65,7 +65,7 @@ CREATE TABLE yzf_index_product(
   title VARCHAR(64),
   pic VARCHAR(64),
   href varchar(128)
-);
+);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 INSERT INTO `yzf_index_product` (`pid`,`family_id`, `title`,`pic`,`href`) VALUES
 (1,1,'燕之坊 黑八宝禅食450g 芝...','/img/index_img/1L01.jpg','4'),
 (2,1,'燕之坊 坚果代餐羹650g 早...','/img/index_img/1L02.jpg','5'),
