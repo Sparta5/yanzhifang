@@ -98,19 +98,51 @@ INSERT INTO `yzf_food_pic` (`pid`, `food_id`, `sm`, `md`, `lg`) VALUES
 (7, 4, '/img/product/sm/402s.jpg','/img/product/md/402m.jpg','/img/product/lg/402l.jpg'),
 (8, 4, '/img/product/sm/403s.jpg','/img/product/md/403m.jpg','/img/product/lg/403l.jpg'),
 (9, 4, '/img/product/sm/404s.jpg','/img/product/md/404m.jpg','/img/product/lg/404l.jpg'),
-(10, 4,'/img/product/sm/405s.jpg','/img/product/md/405m.jpg','/img/product/lg/405l.jpg');
+(10, 4,'/img/product/sm/405s.jpg','/img/product/md/405m.jpg','/img/product/lg/405l.jpg'),
 
+(11, 5, '/img/product/sm/501s.jpg','/img/product/md/501m.jpg','/img/product/lg/501l.jpg'),
+(12, 5, '/img/product/sm/502s.jpg','/img/product/md/502m.jpg','/img/product/lg/502l.jpg'),
+(13, 5, '/img/product/sm/503s.jpg','/img/product/md/503m.jpg','/img/product/lg/503l.jpg'),
+(14, 5, '/img/product/sm/504s.jpg','/img/product/md/504m.jpg','/img/product/lg/504l.jpg'),
+(15, 5, '/img/product/sm/505s.jpg','/img/product/md/505m.jpg','/img/product/lg/505l.jpg'),
+
+(16, 6, '/img/product/sm/601s.jpg','/img/product/md/601m.jpg','/img/product/lg/601l.jpg'),
+(17, 6, '/img/product/sm/602s.jpg','/img/product/md/602m.jpg','/img/product/lg/602l.jpg'),
+(18, 6, '/img/product/sm/603s.jpg','/img/product/md/603m.jpg','/img/product/lg/603l.jpg'),
+
+(19, 7, '/img/product/sm/701s.jpg','/img/product/md/701m.jpg','/img/product/lg/701l.jpg'),
+(20, 7, '/img/product/sm/702s.jpg','/img/product/md/702m.jpg','/img/product/lg/702l.jpg'),
+(21, 7, '/img/product/sm/703s.jpg','/img/product/md/703m.jpg','/img/product/lg/703l.jpg'),
+(22, 7, '/img/product/sm/703s.jpg','/img/product/md/703m.jpg','/img/product/lg/703l.jpg'),
+
+(23, 8, '/img/product/sm/01s.jpg', '/img/product/md/01m.jpg', '/img/product/lg/01l.jpg'),
+(24, 8, '/img/product/sm/02s.jpg', '/img/product/md/02m.jpg', '/img/product/lg/02l.jpg'),
+(25, 8, '/img/product/sm/03s.jpg', '/img/product/md/03m.jpg', '/img/product/lg/03l.jpg'),
+(26, 8, '/img/product/sm/04s.jpg', '/img/product/md/04m.jpg', '/img/product/lg/04l.jpg'),
+(27, 8, '/img/product/sm/05s.jpg', '/img/product/md/05m.jpg', '/img/product/lg/05l.jpg'),
+
+(28, 9, '/img/product/sm/401s.jpg','/img/product/md/401m.jpg','/img/product/lg/401l.jpg'),
+(29, 9, '/img/product/sm/402s.jpg','/img/product/md/402m.jpg','/img/product/lg/402l.jpg'),
+(30, 9, '/img/product/sm/403s.jpg','/img/product/md/403m.jpg','/img/product/lg/403l.jpg'),
+(31, 9, '/img/product/sm/404s.jpg','/img/product/md/404m.jpg','/img/product/lg/404l.jpg'),
+(32, 9, '/img/product/sm/405s.jpg','/img/product/md/405m.jpg','/img/product/lg/405l.jpg'),
+
+(33, 10, '/img/product/sm/501s.jpg','/img/product/md/501m.jpg','/img/product/lg/501l.jpg'),
+(34, 10, '/img/product/sm/502s.jpg','/img/product/md/502m.jpg','/img/product/lg/502l.jpg'),
+(35, 10, '/img/product/sm/503s.jpg','/img/product/md/503m.jpg','/img/product/lg/503l.jpg'),
+(36, 10, '/img/product/sm/504s.jpg','/img/product/md/504m.jpg','/img/product/lg/504l.jpg'),
+(37, 10, '/img/product/sm/505s.jpg','/img/product/md/505m.jpg','/img/product/lg/505l.jpg');
 
 /****首页轮播广告商品****/
-CREATE TABLE yzf_index_carousel(
-  cil INT PRIMARY KEY AUTO_INCREMENT,
-  img VARCHAR(128),
-  title VARCHAR(64),
-  href VARCHAR(128)
+CREATE TABLE `yzf_index_carousel`( 
+  `cil` INT PRIMARY KEY AUTO_INCREMENT,
+  `img` VARCHAR(128),
+  `title` VARCHAR(64),
+  `href` VARCHAR(128)
 );
 TRUNCATE TABLE `yzf_index_carousel`;
 INSERT INTO `yzf_index_carousel` (`cil`,`img`,`title`,`href`) VALUES
 (1, '/img/home/banner1.jpg', '轮播广告商品1', '/'),
 (2, '/img/home/banner2.jpg', '轮播广告商品2', '/'),
-(4, '/img/home/banner3.jpg', '轮播广告商品4', '/');
+(3, '/img/home/banner3.jpg', '轮播广告商品3', '/');
 

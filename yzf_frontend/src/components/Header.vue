@@ -101,7 +101,7 @@
     <!-- 搜索--小购物车 -->
     <div class="top_content">
       <div class="top_content_wrap">
-        <div><img src="/img/logo.png" alt=""></div>
+        <div><router-link to="/"><img src="/img/logo.png"></router-link></div>
         <div class="search">
           <div>
             <input type="text" class="search_input" value="红豆薏米枸杞粉"

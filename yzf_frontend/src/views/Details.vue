@@ -10,7 +10,18 @@
       <div class="product">
         <div class="magnifying">
           <!-- 放大镜预留 -->
-          <my-magnifying :pics="pics" v-if="flag"></my-magnifying>
+          <!-- <my-magnifying :pics="pics" v-if="flag"></my-magnifying> -->
+        <!-- <Glass ></Glass> -->
+        <glass-tow v-if="flag" :img="pics[selectimg].md" :imgb="pics[selectimg].lg"></glass-tow>
+          <div class="priduct_botton"> 
+            <div class="previous"></div>
+            <div>
+              <ul>
+                <li v-for="(p,i) in pics" :key="i"><img :src="p.sm" alt="" @mouseover="selectimg = i"></li>
+              </ul>
+            </div>
+            <div class="next"></div>
+          </div>
         </div>
         <div class="conten_r">
           <div class="detail">
@@ -71,9 +82,12 @@
 <script>
 import myHeader from '../components/Header'
 import myMagnifying from '../components/Magnifying'
+import Glass from '../components/Glass'
+import GlassTow from '../components/GlassTwo'
+
 export default {
   components:{
-    myHeader,myMagnifying
+    myHeader,myMagnifying,Glass,GlassTow
   },
   props:["did"],//undifinde??
   data(){
@@ -83,7 +97,8 @@ export default {
       pics:[
         {md:"",lg:""}
       ],
-      flag:false
+      flag:false,
+      selectimg:0
       // times:0,//记录点击的次数
       // i:0,//记录位置控制中图和大图
     }
@@ -141,9 +156,33 @@ export default {
       width: 968px;
       border: 1px solid #fefefe;
       box-shadow: 0 0 4px #33323293;
+      //放大镜调整
       .magnifying{
-        width: 420px;height: 550px;background-color: rgb(167, 157, 156);
+        width: 420px;height: 550px;
+        //小图部分
+        .priduct_botton{
+          display: flex;
+          // flex-flow: flex wrap-reverse;
+          div:nth-child(2){
+            padding-top: 10px;
+            margin: 0px 16px;
+            width: 360px;height: 70px;
+            overflow: hidden;
+            ul{
+              //切换小图调整（间隔距离70px）
+              margin-left: 0px;
+              li{
+                float: left;
+                padding: 0px 5px;
+                img{width: 60px;height: 60px;}
+              }
+            }
+          }
+          //左右箭头
+          .previous{width: 16px;height: 64px;margin-top: 10px;background-color: rgba(175, 175, 175,0.3);}
+          .next{width: 16px;height: 64px;margin-top: 10px;background-color: rgba(175, 175, 175,0.3);}
         }
+      }
       .conten_r{
         width: 100%;
         .detail{

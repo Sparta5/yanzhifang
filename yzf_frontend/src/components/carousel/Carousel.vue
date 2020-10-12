@@ -3,7 +3,7 @@
     <!--vue-awesome-swiper 文档copy-->
     <swiper ref="mySwiper" :options="swiperOptions" class="swiper">
       <swiper-slide v-for="(i,k) in imgList" :key="k">
-        <img :src="i.img" alt="">
+        <img :src="i.img">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>

@@ -7,7 +7,7 @@ router.get("/",(req,res)=>{
   var did=req.query.did;
   console.log(did)
   var output={};
-  var sql = "SELECT d.did,family_id,title,price,art_no,specification,fname FROM `yzf_food_details` AS d INNER JOIN yzf_food_family AS f ON fid = d.did WHERE d.did =?"
+  var sql = "SELECT d.did,family_id,title,price,art_no,specification,fname FROM `yzf_food_details` AS d INNER JOIN yzf_food_family AS f ON f.fid = d.family_id WHERE d.did =?"
   query(sql,[did])
   .then(result=>{//接住open的值
     output.product=result[0];

@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="indexList" v-for="(item, k) of sortProOne" :key="k">
-    <div class="floor1"><router-link to="/"><img :src="item.img"></router-link></div>
+    <div class="floor1"><router-link :to="`/details/7`"><img :src="item.img"></router-link></div>
     <div class="floor2">
         <div>
           <h6 class="font_14"> <b>{{item.fname}}</b> </h6>
@@ -67,7 +67,7 @@ export default {
         padding: 8px;
         float: left;
         position: relative;
-        
+        margin-left: 6px;
         .shoping{
           img{width: 160px;height: 180px;}
           &:hover .shoping_car{display: block!important;}

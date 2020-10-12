@@ -42,6 +42,7 @@ export default {
 <style lang="scss">
 .magnify{
   position: relative;
+  //小图部分
   .priduct_botton{
     display: flex;
     // flex-flow: flex wrap-reverse;

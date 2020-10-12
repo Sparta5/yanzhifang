@@ -399,7 +399,7 @@
       </div>
     </div>
     <div class="main_content">
-       <img src="../assets/imges/signup/mydcZ.jpg">
+      <router-link to="/details/8"><img src="../assets/imges/signup/mydcZ.jpg"></router-link>
     </div>
     <div class="index_list">
       <index-list></index-list>
