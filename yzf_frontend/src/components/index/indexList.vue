@@ -1,28 +1,56 @@
 <template>
-  <div class="indexList">
-     <div class="floor1"><router-link to="/"><img src="/img/index_img/index01.png"></router-link></div>
-     <div class="floor2">
+<div>
+  <div class="indexList" v-for="(item, k) of sortProOne" :key="k">
+    <div class="floor1"><router-link to="/"><img :src="item.img"></router-link></div>
+    <div class="floor2">
         <div>
-          <h6 class="font_14"> <b>五谷营养膳食</b> </h6>
+          <h6 class="font_14"> <b>{{item.fname}}</b> </h6>
           <ul>
-            <li>
+            <li v-for="(itemList,i) of sortList" :key="i">
               <div class="shoping">
-                <router-link to="4"><img src="/img/index_img/1L01.jpg" alt=""></router-link>
+                <router-link :to="`/details/${itemList.href}`"><img :src="itemList.pic" alt=""></router-link>
                 <div class="shoping_car"><a href="javascript:;">加入购物车</a></div>
               </div>
               <div class="info">
-                <h3><router-link to="4">燕之坊 黑八宝禅食450g 芝...</router-link></h3>
+                <h3><router-link :to="`/details/${itemList.href}`">{{itemList.title}}</router-link></h3>
               </div>
             </li>
           </ul>
         </div>
-     </div>
-     <div class="floor3">
-       <div></div>
-       <router-link to="/"><img src="/img/index_img/index01_1.png" alt=""></router-link>
-     </div>
-  </div>
+    </div>
+    <div class="floor3">
+      <div></div>
+      <router-link to="/"><img :src="item.img_s"></router-link>
+    </div>
+  </div>  
+</div>
+
 </template>
+<script>
+export default {
+  data(){
+    return{
+      sortProOne:"", //产品分类
+      sortList:""
+    }
+
+  },
+  methods:{
+    
+  },
+  mounted(){
+    this.axios.get('/family').then(result=>{
+      this.sortProOne=result.data;
+      console.log(result.data)
+    });
+    this.axios.get('/index').then(result=>{
+      this.sortList=result.data
+      console.log(result.data)
+      console.log(this.sortList.href)
+    })
+  }
+}
+</script>
 <style lang="scss">
 .indexList{
   width: 1200px;
@@ -75,12 +103,17 @@
   }
   .floor3{
     background-color: #f4f4f4;
+    
     >div{
       padding: 25px;
       height: 189px;  
       overflow: hidden;
     }
   }
+  &:first-child .floor3,&:first-child .floor2{border-top:1px solid red;}
+  &:nth-child(2) .floor3,&:nth-child(2) .floor2{border-top:1px solid rgb(214, 178, 19);}
+  &:nth-child(3) .floor3,&:nth-child(3) .floor2{border-top:1px solid rgb(24, 97, 165);}
+  &:nth-child(4) .floor3,&:nth-child(4) .floor2{border-top:1px solid rgb(180, 32, 180);}
   
 }
 </style>

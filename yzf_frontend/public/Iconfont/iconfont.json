@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "435904",
+      "name": "二维码",
+      "font_class": "erweima",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "1207578",
+      "name": "评分",
+      "font_class": "pingfen",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
       "icon_id": "1330916",
       "name": "叹号",
       "font_class": "tanhao",

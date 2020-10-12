@@ -4,12 +4,12 @@ import router from './router'
 import store from './store'
 import Router from 'vue-router'
 
-// import axios from "axios"
-// axios.defaults.baseURL="http://localhost:3000"
+import axios from "axios"
+axios.defaults.baseURL="http://localhost:5050"
 // 配置请求头--全局（推荐）
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 // 注册为全局
-// Vue.prototype.axios=axios
+Vue.prototype.axios=axios
 
 // 使用mockjs
 // import './mock.js'

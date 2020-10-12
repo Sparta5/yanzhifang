@@ -4,6 +4,7 @@
     <div class="main">
       <carousel :value="banner"></carousel>
       <div class="mainNav">
+        <!-- on1 -->
         <ul>
           <li>
             <div class="nav_l">
@@ -42,6 +43,310 @@
                     <a href="javascript:;"> 茯苓粉</a>
                     <a href="javascript:;"> 魔芋粉山药粉</a>
                     <a href="javascript:;"> 青木瓜粉</a>
+                    <a href="javascript:;"> 薏仁禅食500g</a>
+                    <a href="javascript:;"> 杏仁禅食</a>
+                    <a href="javascript:;"> 薏米粉葛根粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">粉粉伴侣</a></dt>
+                  <dd>
+                    <a href="javascript:;">鳌古黑糖</a>
+                    <a href="javascript:;"> 燕麦伴侣</a>
+                    <a href="javascript:;"> 清伴侣</a>
+                    <a href="javascript:;"> 谷香小伴</a>
+                    <a href="javascript:;"> 多晶冰糖</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">气质女神</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 阿胶红枣枸杞粉</a>
+                    <a href="javascript:;"> 葛根木瓜魔芋粉</a>
+                    <a href="javascript:;"> 纤微粉</a>
+                    <a href="javascript:;"> 益元多谷代餐粉</a>
+                    <a href="javascript:;"> 阿胶糕</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">靓汤</a></dt>
+                  <dd></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">专柜同款</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 益元八宝禅食</a>
+                    <a href="javascript:;"> 黑八宝</a>
+                    <a href="javascript:;"> 美八宝</a>
+                    <a href="javascript:;"> 高布帕</a>
+                    <a href="javascript:;"> 清润喜食</a>
+                    <a href="javascript:;"> 固元膏</a>
+                  </dd>
+                </dl>
+                <div class="back_img">
+                  <ul>
+                   <li><a href="javascript:;"><img src="../assets/imges/back_img/bg_img01.jpg"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- on2 -->
+        <ul>
+          <li>
+            <div class="nav_l">
+              <h5><router-link to="/">精选粗粮</router-link><span class="carego_link"></span></h5>
+              <div>
+                <a href="javascript:;">营养早餐</a>
+                <a href="javascript:;">头等大事</a>
+                <a href="javascript:;">粉嫩系列</a>
+              </div>
+            </div>
+            <div class="cat_chldren_box">
+              <div class="cat_item">
+                <dl>
+                  <dt><a href="javascript:;">营养早餐</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 养元八宝粉</a>
+                    <a href="javascript:;"> 芝麻核桃黑豆粉</a>
+                    <a href="javascript:;"> 坚果代餐羹</a>
+                    <a href="javascript:;"> 魔芋代餐粥</a>
+                    <a href="javascript:;"> 红豆薏米枸杞粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">纯粉系列</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 茯苓粉</a>
+                    <a href="javascript:;"> 魔芋粉山药粉</a>
+                    <a href="javascript:;"> 青木瓜粉</a>
+                    <a href="javascript:;"> 薏米粉葛根粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">粉粉伴侣</a></dt>
+                  <dd>
+                    <a href="javascript:;">鳌古黑糖</a>
+                    <a href="javascript:;"> 燕麦伴侣</a>
+                    <a href="javascript:;"> 多晶冰糖</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">气质女神</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 阿胶红枣枸杞粉</a>
+                    <a href="javascript:;"> 阿胶糕</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">专柜同款</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 益元八宝禅食</a>
+                    <a href="javascript:;"> 黑八宝</a>
+                    <a href="javascript:;"> 美八宝</a>
+                    <a href="javascript:;"> 高布帕</a>
+                    <a href="javascript:;"> 清润喜食</a>
+                    <a href="javascript:;"> 固元膏</a>
+                  </dd>
+                </dl>
+                <div class="back_img">
+                  <ul>
+                   <li><a href="javascript:;"><img src="../assets/imges/back_img/bg_img02.jpg"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- on3 -->
+        <ul>
+          <li>
+            <div class="nav_l">
+              <h5><router-link to="/">健康生活</router-link><span class="carego_link"></span></h5>
+              <div>
+                <a href="javascript:;">营养早餐</a>
+                <a href="javascript:;">头等大事</a>
+                <a href="javascript:;">粉嫩系列</a>
+              </div>
+            </div>
+            <div class="cat_chldren_box">
+              <div class="cat_item">
+                <dl>
+                  <dt><a href="javascript:;">营养早餐</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 养元八宝粉</a>
+                    <a href="javascript:;"> 芝麻核桃黑豆粉</a>
+                    <a href="javascript:;"> 坚果代餐羹</a>
+                    <a href="javascript:;"> 魔芋代餐粥</a>
+                    <a href="javascript:;"> 红豆薏米枸杞粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">头顶大事</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 熟黑芝麻</a>
+                    <a href="javascript:;"> 黑芝麻禅食</a>
+                    <a href="javascript:;"> 黑八宝450g</a>
+                    <a href="javascript:;"> 黑五宝</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">纯粉系列</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 山药粉</a>
+                    <a href="javascript:;"> 茯苓粉</a>
+                    <a href="javascript:;"> 魔芋粉山药粉</a>
+                    <a href="javascript:;"> 青木瓜粉</a>
+                    <a href="javascript:;"> 薏仁禅食500g</a>
+                    <a href="javascript:;"> 杏仁禅食</a>
+                    <a href="javascript:;"> 薏米粉葛根粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">粉粉伴侣</a></dt>
+                  <dd>
+                    <a href="javascript:;">鳌古黑糖</a>
+                    <a href="javascript:;"> 燕麦伴侣</a>
+                    <a href="javascript:;"> 谷香小伴</a>
+                    <a href="javascript:;"> 多晶冰糖</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">气质女神</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 阿胶红枣枸杞粉</a>
+                    <a href="javascript:;"> 葛根木瓜魔芋粉</a>
+                    <a href="javascript:;"> 益元多谷代餐粉</a>
+                    <a href="javascript:;"> 阿胶糕</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">靓汤</a></dt>
+                  <dd></dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">专柜同款</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 益元八宝禅食</a>
+                    <a href="javascript:;"> 黑八宝</a>
+                    <a href="javascript:;"> 高布帕</a>
+                    <a href="javascript:;"> 固元膏</a>
+                  </dd>
+                </dl>
+                <div class="back_img">
+                  <ul>
+                   <li><a href="javascript:;"><img src="../assets/imges/back_img/bg_img03.jpg"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- on4 -->
+        <ul>
+          <li>
+            <div class="nav_l">
+              <h5><router-link to="/">礼盒专区</router-link><span class="carego_link"></span></h5>
+              <div>
+                <a href="javascript:;">营养早餐</a>
+                <a href="javascript:;">头等大事</a>
+                <a href="javascript:;">粉嫩系列</a>
+              </div>
+            </div>
+            <div class="cat_chldren_box">
+              <div class="cat_item">
+                <dl>
+                  <dt><a href="javascript:;">头顶大事</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 熟黑芝麻</a>
+                    <a href="javascript:;"> 黑芝麻禅食</a>
+                    <a href="javascript:;"> 黑八宝450g</a>
+                    <a href="javascript:;"> 黑五宝</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">纯粉系列</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 山药粉</a>
+                    <a href="javascript:;"> 茯苓粉</a>
+                    <a href="javascript:;"> 魔芋粉山药粉</a>
+                    <a href="javascript:;"> 青木瓜粉</a>
+                    <a href="javascript:;"> 薏仁禅食500g</a>
+                    <a href="javascript:;"> 杏仁禅食</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">粉粉伴侣</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 清伴侣</a>
+                    <a href="javascript:;"> 谷香小伴</a>
+                    <a href="javascript:;"> 多晶冰糖</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">气质女神</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 纤微粉</a>
+                    <a href="javascript:;"> 益元多谷代餐粉</a>
+                    <a href="javascript:;"> 阿胶糕</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">专柜同款</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 益元八宝禅食</a>
+                    <a href="javascript:;"> 黑八宝</a>
+                    <a href="javascript:;"> 清润喜食</a>
+                    <a href="javascript:;"> 固元膏</a>
+                  </dd>
+                </dl>
+                <div class="back_img">
+                  <ul>
+                   <li><a href="javascript:;"><img src="../assets/imges/back_img/bg_img04.jpg"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- on5 -->
+        <ul>
+          <li>
+            <div class="nav_l">
+              <h5><router-link to="/">南北干货</router-link><span class="carego_link"></span></h5>
+              <div>
+                <a href="javascript:;">营养早餐</a>
+                <a href="javascript:;">头等大事</a>
+                <a href="javascript:;">粉嫩系列</a>
+              </div>
+            </div>
+            <div class="cat_chldren_box">
+              <div class="cat_item">
+                <dl>
+                  <dt><a href="javascript:;">营养早餐</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 养元八宝粉</a>
+                    <a href="javascript:;"> 芝麻核桃黑豆粉</a>
+                    <a href="javascript:;"> 魔芋代餐粥</a>
+                    <a href="javascript:;"> 红豆薏米枸杞粉</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">头顶大事</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 熟黑芝麻</a>
+                    <a href="javascript:;"> 黑芝麻禅食</a>
+                    <a href="javascript:;"> 黑八宝450g</a>
+                    <a href="javascript:;"> 黑五宝</a>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt><a href="javascript:;">纯粉系列</a></dt>
+                  <dd>
+                    <a href="javascript:;"> 山药粉</a>
+                    <a href="javascript:;"> 茯苓粉</a>
+                    <a href="javascript:;"> 魔芋粉山药粉</a>
                     <a href="javascript:;"> 薏仁禅食500g</a>
                     <a href="javascript:;"> 杏仁禅食</a>
                     <a href="javascript:;"> 薏米粉葛根粉</a>
@@ -140,7 +445,10 @@ export default {
         top: 0px;left:0px;
         z-index: 10;
         ul{
-
+            margin-bottom: 0px;
+            &:first-child{padding-top: 10px;}
+            &:last-child .cat_chldren_box{top: 42px;}
+            &:nth-child(4) .cat_chldren_box{top: 25px;}
           li{
             height: 93px;
             border-bottom: 1px solid rgba(116, 111, 153, 0.3); 
@@ -230,7 +538,7 @@ export default {
     }
     .main_content{
       width: 1200px;
-      margin: 36px auto;
+      margin: 36px auto 8px;
     }
   }
 </style>

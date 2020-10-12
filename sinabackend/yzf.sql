@@ -47,7 +47,7 @@ CREATE TABLE `yzf_food_details` (
 TRUNCATE TABLE `yzf_food_details`;
 INSERT INTO `yzf_food_details` (`did`,`family_id`,`title`,`price`,`art_no`,`specification`)VALUES
 (1,1,'燕之坊 精选白砂糖400g 早餐晚餐 熬粥 煮豆浆','11.80','	C01060010026','燕之坊 精选白砂糖400g'),
-(2,1,'燕之坊冻干红枣枸杞银耳羹90g营养早餐免煮冲泡即食6包装','39.80','C03070080014','燕之坊冻干红枣枸杞银耳羹90g'),
+(2,1,'燕之坊冻干红枣枸杞银耳羹90g营养早餐免煮冲泡即食6包装','39.80','C03070080014','燕之坊 冻干红枣枸杞银耳羹90g'),
 (4,1,'燕之坊 黑八宝禅食450g 芝麻桑葚奇亚籽粉 黑芝麻 熟粉 早餐禅食代餐粉','12.80','C01060089874','燕之坊 黑八宝禅食450g'),
 (5,1,'燕之坊 坚果代餐羹650g 早餐代餐粉 蔓越莓葡萄干黑芝麻腰果红枣','72.80','C0106008782','燕之坊 坚果代餐羹650g'),
 (6,1,'燕之坊 核桃芝麻奇亚籽粉500g 五谷杂粮 早餐禅食代餐粉','19.80','C0106008888','燕之坊 核桃芝麻奇亚籽粉500g '),
@@ -65,7 +65,7 @@ CREATE TABLE yzf_index_product(
   title VARCHAR(64),
   pic VARCHAR(64),
   href varchar(128)
-);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+);
 INSERT INTO `yzf_index_product` (`pid`,`family_id`, `title`,`pic`,`href`) VALUES
 (1,1,'燕之坊 黑八宝禅食450g 芝...','/img/index_img/1L01.jpg','4'),
 (2,1,'燕之坊 坚果代餐羹650g 早...','/img/index_img/1L02.jpg','5'),
@@ -78,16 +78,16 @@ INSERT INTO `yzf_index_product` (`pid`,`family_id`, `title`,`pic`,`href`) VALUES
 (8,2,'燕之坊 自然吊干400g 新疆楼兰...','/img/index_img/2L01.jpg','11');
 
 /**详情页图片**/
-DROP TABLE IF EXISTS `xz_food_pic`;
-CREATE TABLE `xz_food_pic` (
+DROP TABLE IF EXISTS `yzf_food_pic`;
+CREATE TABLE `yzf_food_pic` (
   `pid` INT PRIMARY KEY AUTO_INCREMENT,
   `food_id` INT,                #编号对应详情页did
   `sm` VARCHAR(128),            #小图片路径
   `md` VARCHAR(128),            #中图片路径
   `lg` VARCHAR(128)             #大图片路径
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-TRUNCATE TABLE `xz_food_pic`;
-INSERT INTO `xz_food_pic` (`pid`, `food_id`, `sm`, `md`, `lg`) VALUES
+TRUNCATE TABLE `yzf_food_pic`;
+INSERT INTO `yzf_food_pic` (`pid`, `food_id`, `sm`, `md`, `lg`) VALUES
 (1, 1, '/img/product/sm/01s.jpg', '/img/product/md/01m.jpg', '/img/product/lg/01l.jpg'),
 (2, 1, '/img/product/sm/02s.jpg', '/img/product/md/02m.jpg', '/img/product/lg/02l.jpg'),
 (3, 1, '/img/product/sm/03s.jpg', '/img/product/md/03m.jpg', '/img/product/lg/03l.jpg'),
