@@ -109,6 +109,7 @@ INSERT INTO `yzf_food_pic` (`pid`, `food_id`, `sm`, `md`, `lg`) VALUES
 (16, 6, '/img/product/sm/601s.jpg','/img/product/md/601m.jpg','/img/product/lg/601l.jpg'),
 (17, 6, '/img/product/sm/602s.jpg','/img/product/md/602m.jpg','/img/product/lg/602l.jpg'),
 (18, 6, '/img/product/sm/603s.jpg','/img/product/md/603m.jpg','/img/product/lg/603l.jpg'),
+(37, 6, '/img/product/sm/604s.jpg','/img/product/md/604m.jpg','/img/product/lg/604l.jpg'),
 
 (19, 7, '/img/product/sm/701s.jpg','/img/product/md/701m.jpg','/img/product/lg/701l.jpg'),
 (20, 7, '/img/product/sm/702s.jpg','/img/product/md/702m.jpg','/img/product/lg/702l.jpg'),
@@ -131,7 +132,7 @@ INSERT INTO `yzf_food_pic` (`pid`, `food_id`, `sm`, `md`, `lg`) VALUES
 (34, 10, '/img/product/sm/502s.jpg','/img/product/md/502m.jpg','/img/product/lg/502l.jpg'),
 (35, 10, '/img/product/sm/503s.jpg','/img/product/md/503m.jpg','/img/product/lg/503l.jpg'),
 (36, 10, '/img/product/sm/504s.jpg','/img/product/md/504m.jpg','/img/product/lg/504l.jpg'),
-(37, 10, '/img/product/sm/505s.jpg','/img/product/md/505m.jpg','/img/product/lg/505l.jpg');
+(38, 10, '/img/product/sm/505s.jpg','/img/product/md/505m.jpg','/img/product/lg/505l.jpg');
 
 /****首页轮播广告商品****/
 CREATE TABLE `yzf_index_carousel`( 
